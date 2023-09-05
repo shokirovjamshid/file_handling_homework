@@ -6,5 +6,11 @@ def main(data:str):
     Returns:
         list: return answer
     """
-
+    f = open(data,'r')
+    data = f.read()
+    data_int_list = []
+    for i in data:
+        if i.isdigit():
+            data_int_list.append(int(i))
+    return data_int_list
 # Read data from file
